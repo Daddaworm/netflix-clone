@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import { Dropdown } from 'react-bootstrap';
+import "bootstrap/dist/css/bootstrap.min.css"
 import './Nav.css'
+
 
 const Nav = () => {
 
@@ -25,11 +28,28 @@ const Nav = () => {
                 alt="Netflix Logo"
             />
 
-            <img
+
+            {/* <img
                 className="nav__avatar"
                 src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
                 alt="Netflix Avatar"
-            />
+            /> */}
+            <div className="dropdown__menu">
+                <Dropdown>
+                    <Dropdown.Toggle size="sm" variant="secondary" id="dropdown-basic">
+                        <img
+                            className="nav__avatar"
+                            src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+                            alt="Netflix Avatar"
+                        />
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                        <Dropdown.Item href="#/action-1">Login</Dropdown.Item>
+                        <Dropdown.Item href="#/action-2">Logout</Dropdown.Item>
+                        <Dropdown.Item href="#/action-3">Sign-up</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
+            </div>
         </div>
     )
 }
