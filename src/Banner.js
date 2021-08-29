@@ -33,13 +33,16 @@ const Banner = () => {
         > 
             <div className="banner_contents">
                 {/* <<< background image */}
-                {/*title  */}
-                <h1>
-                    {movie?.title || movie?.name || movie?.original_name}
-                </h1>
+                <h1>{movie?.title || movie?.name || movie?.original_name}</h1>
+                
+                <div className="banner__buttons">
+                    <button className="banner__button"></button>
+                    <button className="banner__button"></button>
+
+                </div>
+
                 {/* div > two buttons */}
                 {/* description */}
-
             </div>
         </header>
     )
